@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perhutani</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: url('../images/background.jpg') no-repeat center center/cover;
+            color: #333;
+        }
+
+        header {
+            background: #004d00;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            position: relative;
+        }
+
+        a:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: rgb(133, 160, 223);
+        }
+
+        .container img.logo-pht {
+            width: 120px;
+            margin-bottom: 1rem;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 38, 188, 0.8);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+            margin-bottom: 30px;
+        }
+
+        .hero img.hutan {
+            width: 100%; 
+            height: 400px;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0.7;
+        }
+
+        .hero-content {
+            position: absolute;
+            z-index: 2;
+            text-align: center;
+            top: 80px;
+            padding: 1rem;
+            background: rgba(37, 66, 37, 0.8);
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                margin-top: 10px;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .hero img.hutan {
+                height: 300px;
+            }
+
+            .hero-content {
+                top: 50px;
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content p {
+                font-size: 0.9rem;
+            }
+
+            .hero img.hutan {
+                height: 200px;
+            }
+
+            .hero-content {
+                top: 40px;
+                padding: 0.5rem;
+            }
+
+            .container img.logo-pht {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="gambar/logopht.png" alt="logo perhutani" class="logo-pht">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tentangkami.html">Tentang Kami</a></li>
+                    <li><a href="padangan.html">KPH Padangan</a></li>
+                    <li><a href="#">Unit Bisnis</a></li>
+                    <li><a href="#">Kontak Kami</a></li>    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hutan">
+                <img src="gambar/hutan.jpg" alt="">
+            </div>
+            <div class="hero-content">
+                <h2>KPH PADANGAN</h2>
+                <p>Bangkit untuk Mandiri.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
